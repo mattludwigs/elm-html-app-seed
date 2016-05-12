@@ -1,0 +1,11 @@
+#!/bin/bash
+bProgramUrl="https://raw.githubusercontent.com/mattludwigs/elm-html-app-seed/master/HtmlBeginnerProgram.elm"
+programUrl="https://raw.githubusercontent.com/mattludwigs/elm-html-app-seed/master/HtmlProgram.elm"
+
+if [ $1 == "html.program" ]; then
+  echo "getting html.program"
+  curl $programUrl > $2
+elif [ $1 == "html.beginnerprogram" ]; then
+  echo "getting html.beginnerprogram"
+  curl $bProgramUrl > $2
+fi
